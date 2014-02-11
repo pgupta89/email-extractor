@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"	?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+        xmlns:int-mail="http://www.springframework.org/schema/integration/mail">
  
-	<!-- Beans definitions are goes  here!-->
+    <bean id="emailReciever" class="com.mootly.wcm.email.EmailReciever">
+	</bean>
+	
+	<bean id = "mailParameters" class="com.mootly.wcm.email.MailParameters">
+	<property name="hostName" value="imap.gmail.com"  ></property>
+	<property name="userName" value="psingh@mootly.com" ></property>
+	<property name="passWord" value="mootly007" ></property>
+	
+	</bean>
  
 </beans>
+
+
+
+    
+    
+    
